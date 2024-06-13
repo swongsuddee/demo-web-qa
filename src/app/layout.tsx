@@ -33,7 +33,7 @@ export default function RootLayout({
       </body> */}
 
       <body className={inter.className}>
-        <div className="mt-10 max-w-100 flex items-center justify-center h-screen">
+        <div className="px-10 py-10 max-w-100 flex items-center justify-center h-screen">
           {children}
         </div>
       </body>
