@@ -49,6 +49,7 @@ const MultipleImageUploadPage: React.FC = () => {
                 />
                 <div className="grid grid-cols-3 gap-4 mb-4">
                     {selectedImages.map((imageFile, index) => (
+                        console.log(`Image index ${index} : `, imageFile),
                         <div key={index} className="mb-4">
                             <img
                                 src={imageFile.preview}
