@@ -18,7 +18,7 @@ export function BoxCard(
 ) {
     return (
         <div className="py-4">
-            <input
+            {/* <input
                 className="mr-2"
                 type={inputProps.type}
                 key={cardName}
@@ -31,7 +31,7 @@ export function BoxCard(
                 onClick={() => {
                     console.log({ cardName })
                 }}
-            />
+            /> */}
             <span>{cardName}</span>
         </div>
     );
