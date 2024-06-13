@@ -21,11 +21,10 @@ const MultipleImageUploadPage: React.FC = () => {
                         file,
                         preview: reader.result as string,
                     });
-                    if (newSelectedImages.length === files.length) {
-                        setSelectedImages((prevImages) => [...prevImages, ...newSelectedImages]);
-                    }
+                    setSelectedImages(() => [...newSelectedImages]);
                 };
                 reader.readAsDataURL(file);
+                console.log(`Attach image: ${file}`)
             });
         }
     };
@@ -49,10 +48,11 @@ const MultipleImageUploadPage: React.FC = () => {
                 />
                 <div className="grid grid-cols-3 gap-4 mb-4">
                     {selectedImages.map((imageFile, index) => (
-                        console.log(`Image index ${index} : `, imageFile),
+                        console.log(`Preview image index ${index} : `, imageFile),
                         <div key={index} className="mb-4">
                             <img
                                 src={imageFile.preview}
+                                width={30}
                                 alt={`Image Preview ${index + 1}`}
                                 className="w-64 h-64 object-cover"
                             />
