@@ -44,7 +44,7 @@ const Dropdown = (() => {
                             <option
                                 className="text-center text-base text-black	"
                                 key={item.id}
-                                value={item.name}
+                                value={`value-${item.name}`}
                                 data-testid={`option-${item.name}`}
                             // onClick={() => { console.log(item.name) }}
                             >
@@ -80,7 +80,7 @@ const Dropdown = (() => {
                                     <option
                                         className="text-center text-base text-black	"
                                         key={item.id}
-                                        value={item.name}
+                                        value={`value-${item.name}`}
                                         data-testid={`option-${item.name}`}
                                     // onClick={() => { console.log(item.name) }}
                                     >
