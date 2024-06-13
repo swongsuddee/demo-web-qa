@@ -1,13 +1,14 @@
 import { Metadata } from "next";
 import Image from 'next/image'
+import { useRouter } from "next/router";
 
 export const metadata: Metadata = {
     title: '7. Download',
 };
 
 const DownloadPage = (() => {
-    const IndexPage = () => <a href="/api/getPDF">Download PDF</a>;
-    // export default IndexPage;
+    const router = useRouter();
+    const basePath = router.basePath;
 
     return (
         <div className="justify-center">
@@ -19,7 +20,7 @@ const DownloadPage = (() => {
                 alt="Dummy image for download"
             />
             <br />
-            <a href="/image.webp" download="image.webp">
+            <a href={`${basePath}/image.png`} download="image.webp">
                 <button
                     className="
                     justify-self-center
