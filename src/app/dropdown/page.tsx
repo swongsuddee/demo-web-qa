@@ -8,16 +8,16 @@ export const metadata: Metadata = {
 const Dropdown = (() => {
 
     const animals = [
-        { name: "Ant" },
-        { name: "Bird" },
-        { name: "Cat" },
-        { name: "Dog" }
+        { id: '1', name: "Ant" },
+        { id: '2', name: "Bird" },
+        { id: '3', name: "Cat" },
+        { id: '4', name: "Dog" }
     ]
     const fruits = [
-        { name: "Apple" },
-        { name: "Banana" },
-        { name: "Cherry" },
-        { name: "Durian" }
+        { id: '1', name: "Apple" },
+        { id: '2', name: "Banana" },
+        { id: '3', name: "Cherry" },
+        { id: '4', name: "Durian" }
     ]
 
     return (
@@ -31,6 +31,7 @@ const Dropdown = (() => {
                         animals.map((item) => {
                             return <OptionCard
                                 optionProps={{
+                                    id: item.id,
                                     value: item.name,
                                 }}
                                 children={item.name}
@@ -54,6 +55,7 @@ const Dropdown = (() => {
                                 fruits.map((item) => {
                                     return <OptionCard
                                         optionProps={{
+                                            id: item.id,
                                             value: item.name,
                                         }}
                                         children={item.name}
