@@ -11,54 +11,56 @@ export const metadata: Metadata = {
 const button = (() => {
     return (
         <div>
-            <div className="grid grid-flow-col auto-cols-max py-4 ">
-                <div>
-                    Single
-                    <LeftClickButton
-                        ButtonProps={{ children: "Click" }}
-                        datatestid={"click-count"}
-                    />
-                    button
+            <div className="py-4">
+                <div className="grid grid-cols-3 justify-center">
+                    <div>Single</div>
+                    <div>
+                        <LeftClickButton
+                            ButtonProps={{ children: "Click" }}
+                            datatestid={"click-count"}
+                        />
+                    </div>
+                    <div>button</div>
                 </div>
             </div>
-            <div className="grid grid-flow-col auto-cols-max py-4 ">
-                <div>
-                    Double
+            <div className="py-4">
+                <div className="grid grid-cols-3">
+                    <div>Double</div>
                     <DoubleClickButton
                         ButtonProps={{ children: "Click" }}
                         datatestid={"dbclick-count"}
                     />
-                    button
+                    <div>button</div>
                 </div>
             </div>
-            <div className="grid grid-flow-col auto-cols-max py-4 ">
-                <div>
-                    Right
+            <div className="py-4">
+                <div className="grid grid-cols-3">
+                    <div>Right</div>
                     <RightClickButton
                         ButtonProps={{ children: "Click" }}
                         datatestid={"rightclick-count"}
                     />
-                    button
+                    <div>button</div>
                 </div>
             </div>
-            <div className="grid grid-flow-col auto-cols-max py-4 ">
-                <div>
-                    Disabled
+            <div className="py-4">
+                <div className="grid grid-cols-3">
+                    <div>Disabled</div>
                     <LeftClickButton
                         ButtonProps={{ children: "Click", disabled: true }}
                         datatestid={"diabled-count"}
                     />
-                    button
+                    <div>button</div>
                 </div>
             </div>
-            <div className="grid grid-flow-col auto-cols-max py-4 ">
-                <div>
-                    Toggle
+            <div className="py-4">
+                <div className="grid grid-cols-3">
+                    <div>Toggle</div>
                     <ToggleButton
                         ButtonProps={{ children: "Like" }}
                         datatestid={"like-button"}
                     />
-                    button
+                    <div>button</div>
                 </div>
             </div>
         </div >
