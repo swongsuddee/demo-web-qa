@@ -26,6 +26,7 @@ const Dropdown = (() => {
                 <div>Single select dropdown</div>
                 <select
                     className="mx-2 h-8 w-40 text-center rounded-md border-solid border border-amber-500"
+                    data-testid="dropdown-selection"
                 >
                     {
                         // animals.map((item, index) => {
@@ -61,6 +62,7 @@ const Dropdown = (() => {
                     <select
                         className="mx-2 h-flex w-40 rounded-md border-solid border border-amber-500"
                         multiple
+                        data-testid="listbox"
                     >
                         <optgroup
                             className="mx-2 my-1 text-xs text-slate-400	"
