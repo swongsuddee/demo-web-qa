@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import MultipleImageUploadPage from "./multi-upload-handler";
+import ImageUploadPage from "./upload-handler";
 
 export const metadata: Metadata = {
     title: '8. Upload',
@@ -8,9 +8,10 @@ export const metadata: Metadata = {
 const UploadPage = (() => {
     return (
         <div className="grid grid-cols-1">
-            <div>
+            <ImageUploadPage />
+            {/* <div>
                 <MultipleImageUploadPage />
-            </div>
+            </div> */}
         </div>
     )
 })
