@@ -28,17 +28,30 @@ const Dropdown = (() => {
                     className="mx-2 h-8 w-40 text-center rounded-md border-solid border border-amber-500"
                 >
                     {
-                        animals.map((item, index) => {
-                            return (
-                                <OptionCard
-                                    optionProps={{
-                                        id: `${index}`,
-                                        value: item.name,
-                                    }}
-                                    children={item.name}
-                                />
-                            )
-                        })
+                        // animals.map((item, index) => {
+                        //     return (
+                        //         <OptionCard
+                        //             optionProps={{
+                        //                 id: `${index}`,
+                        //                 value: item.name,
+                        //             }}
+                        //             children={item.name}
+                        //         />
+                        //     )
+                        // })
+
+                        animals.map((item) =>
+                            <option
+                                className="text-center text-base text-black	"
+                                key={item.id}
+                                value={item.name}
+                                data-testid={`option-${item.name}`}
+                            // onClick={() => { console.log(item.name) }}
+                            >
+                                {item.name}
+                            </option>
+                        )
+
                     }
                 </select>
             </div>
@@ -54,15 +67,26 @@ const Dropdown = (() => {
                             label="Fruits"
                         >
                             {
-                                fruits.map((item) => {
-                                    return <OptionCard
-                                        optionProps={{
-                                            id: item.id,
-                                            value: item.name,
-                                        }}
-                                        children={item.name}
-                                    />
-                                })
+                                // fruits.map((item) => {
+                                //     return <OptionCard
+                                //         optionProps={{
+                                //             id: item.id,
+                                //             value: item.name,
+                                //         }}
+                                //         children={item.name}
+                                //     />
+                                // })
+                                fruits.map((item) =>
+                                    <option
+                                        className="text-center text-base text-black	"
+                                        key={item.id}
+                                        value={item.name}
+                                        data-testid={`option-${item.name}`}
+                                    // onClick={() => { console.log(item.name) }}
+                                    >
+                                        {item.name}
+                                    </option>
+                                )
                             }
                         </optgroup>
                     </select>
