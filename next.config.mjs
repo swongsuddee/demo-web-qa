@@ -1,9 +1,5 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
-
-module.exports = {
+const nextConfig = {
     assetPrefix: process.env.NODE_ENV === 'production' ? 'https://github.com/swongsuddee/demo-web-qa.git' : '',
     images: {
         loader: 'imgix',
@@ -11,3 +7,5 @@ module.exports = {
     },
     trailingSlash: true,
 };
+
+export default nextConfig;
