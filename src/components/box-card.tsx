@@ -21,10 +21,12 @@ export function BoxCard(
             <input
                 className="mr-2"
                 type={inputProps.type}
+                key={cardName}
                 value={cardName}
                 checked={inputProps.checked}
                 disabled={inputProps.disabled}
                 data-testid={datatestid}
+
 
                 onClick={() => {
                     console.log({ cardName })
