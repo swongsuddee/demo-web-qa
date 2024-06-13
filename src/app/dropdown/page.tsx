@@ -28,14 +28,16 @@ const Dropdown = (() => {
                     className="mx-2 h-8 w-40 text-center rounded-md border-solid border border-amber-500"
                 >
                     {
-                        animals.map((item) => {
-                            return <OptionCard
-                                optionProps={{
-                                    id: item.id,
-                                    value: item.name,
-                                }}
-                                children={item.name}
-                            />
+                        animals.map((item, index) => {
+                            return (
+                                <OptionCard
+                                    optionProps={{
+                                        id: `${index}`,
+                                        value: item.name,
+                                    }}
+                                    children={item.name}
+                                />
+                            )
                         })
                     }
                 </select>
