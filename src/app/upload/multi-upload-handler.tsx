@@ -21,10 +21,10 @@ const MultipleImageUploadPage: React.FC = () => {
                         file,
                         preview: reader.result as string,
                     });
+                    console.log(`Attach image: ${newSelectedImages.length}`)
                     setSelectedImages(() => [...newSelectedImages]);
                 };
                 reader.readAsDataURL(file);
-                console.log(`Attach image: ${file}`)
             });
         }
     };
