@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import ImageUploadPage from "./upload-handler";
 import MultipleImageUploadPage from "./multi-upload-handler";
 
 export const metadata: Metadata = {
