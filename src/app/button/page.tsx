@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const button = (() => {
     return (
         <div>
-            <div className="py-4">
+            <div className="py-4" data-testid="single-click-example">
                 <div className="grid grid-cols-3 justify-center">
                     <div>Single</div>
                     <div>

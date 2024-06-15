@@ -34,6 +34,7 @@ export function LeftClickButton(
             )}
             onClick={handleClick}
             disabled={ButtonProps.disabled}
+            data-testid="single-click"
         >
             <div>
                 {ButtonProps.children} (

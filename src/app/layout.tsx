@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | My Playground',
+    template: '%s | Hello',
     default: 'My Playground',
   },
   // description: 'The official Next.js Learn Dashboard built with App Router.',
