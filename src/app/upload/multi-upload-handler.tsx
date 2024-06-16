@@ -45,6 +45,7 @@ const MultipleImageUploadPage: React.FC = () => {
                     onChange={handleImageChange}
                     multiple
                     className="mb-4"
+                    data-testid="upload-images"
                 />
                 <div className="grid grid-cols-3 gap-4 mb-4">
                     {selectedImages.map((imageFile, index) => (
@@ -55,6 +56,7 @@ const MultipleImageUploadPage: React.FC = () => {
                                 width={30}
                                 alt={`Image Preview ${index + 1}`}
                                 className="w-64 h-64 object-cover"
+                                data-testid={`Image-Preview-${index + 1}`}
                             />
                         </div>
                     ))}
